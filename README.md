@@ -9,7 +9,7 @@ In this project, I built an ETL(Extract, Transform and Load) pipeline using Spot
 ### About Dataset/API
 
 This API contains information about music artist, albums and songs.
-[Sppotify API](https://developer.spotify.com/documentation/web-api)
+[Spotify API](https://developer.spotify.com/documentation/web-api)
  
 ### Services Used
 1. **S3 (simple Storage Services)**: Amazon S3 is a highly scalable object storage service that can store and retrieve any amount of data from anywhere on the web. It is commonly used to store and distribuite large media files, data backups, and static website files.
@@ -27,3 +27,7 @@ import spotipy
 import sys
 from spotipy.oauth2 import SpotifyClientCredentials
 ```
+
+### Project Execution Flow
+
+Extract data from API > Lambda trigger (every 1 hour) > Run Extract code > Store raw data > Trigger transformation function > Transform data and load it > Query it using Athena.
