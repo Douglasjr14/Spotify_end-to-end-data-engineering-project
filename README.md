@@ -20,9 +20,9 @@ This API contains information about music artist, albums and songs.
 
 ### Install packages
 
-'''
+```
 pip install pandas as pd
 import spotipy
 import sys
 from spotipy.oauth2 import SpotifyClientCredentials
-'''
+```
